@@ -9,7 +9,7 @@ function ItemPost(props) {
     <div className="item-post">
       <div className="item-post-bg" onClick={onOutsideClick} />
       <div className="item-post-content">
-        <img src={propsData.thumbnail} />
+        <img src={propsData.fullImg} />
         <h4>{propsData.title}</h4>
       </div>
     </div>
