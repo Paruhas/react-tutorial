@@ -10,16 +10,16 @@ function Navbar() {
     <div className="app-header">
       <ul>
         <li>
-          <Link to="/">Home Page</Link>
+          <Link to="/">HomePage</Link>
         </li>
         <li>
-          <Link to="/page001">First Page</Link>
+          <Link to="/page001">FirstPage</Link>
         </li>
         <li>
-          <Link to="/page002">Second Page</Link>
+          <Link to="/page002">SecondPage</Link>
         </li>
         <li>
-          <Link to="/page003">Third Page</Link>
+          <Link to="/page003">ThirdPage</Link>
         </li>
       </ul>
     </div>
