@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/ImgItem.css";
-import imageItem from "../image/001.jpg";
 
 function ImgItem(props) {
   // console.log(props);
@@ -8,7 +7,11 @@ function ImgItem(props) {
 
   return (
     <div className="img-item">
-      <img src={propsData.thumbnail} onClick={() => onImageClick(propsData)} />
+      <img
+        src={propsData.thumbnail}
+        alt="thumbnailImg"
+        onClick={() => onImageClick(propsData)}
+      />
       <h4>{propsData.title}</h4>
     </div>
   );

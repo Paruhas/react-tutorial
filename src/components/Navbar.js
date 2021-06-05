@@ -1,11 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./css/AppHeader.css";
 
 function Navbar() {
-  const history = useHistory();
-
   return (
     <div className="app-header">
       <ul>
