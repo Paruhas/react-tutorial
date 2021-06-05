@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import Popup from "../components/Popup";
+import "./css/Page002.css";
 
 function Page001() {
   const [users, setUsers] = useState([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
     getUsers();
@@ -19,8 +22,25 @@ function Page001() {
   };
 
   const userElement = users.map((item, index) => {
-    return <h3 key={item.id}>{item.email}</h3>;
+    return (
+      <h3 className="app-container-h3" key={item.id}>
+        {item.email}
+      </h3>
+    );
   });
+
+  function openPopup() {
+    setIsPopupOpen(true);
+  }
+
+  function closePopup() {
+    setIsPopupOpen(false);
+  }
+
+  let popupElement = null;
+  if (isPopupOpen) {
+    popupElement = <Popup closePopup={closePopup} />;
+  }
 
   return (
     <div>
@@ -29,10 +49,14 @@ function Page001() {
       <h1>useEffect</h1>
       <section className="app-section">
         <div className="app-container">
-          <h1>User Email</h1>
+          <button className="app-container-popup-btn" onClick={openPopup}>
+            OPEN POPUP
+          </button>
+          <h1 className="app-container-h1">User Email</h1>
           {userElement}
         </div>
       </section>
+      {popupElement}
     </div>
   );
 }
