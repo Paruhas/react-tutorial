@@ -7,12 +7,12 @@
   margin: 10px;
 }
 
-form {
+.editInput-form {
   display: flex;
   flex-direction: column;
 }
 
-form > * {
+.editInput-form > * {
   margin: 10px;
   padding: 10px;
 }

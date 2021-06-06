@@ -83,7 +83,7 @@ function Page001() {
       <div className="editInput">
         <div className="editInput-bg" onClick={() => setInputEdit(null)}></div>
         <div className="editInput-content">
-          <form onSubmit={inputEditSubmit}>
+          <form className="editInput-form" onSubmit={inputEditSubmit}>
             <p>Input1 Text: </p>
             <textarea
               rows="5"
