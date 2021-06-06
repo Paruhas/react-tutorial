@@ -9,22 +9,22 @@ const fakeUserData = {
 };
 
 function LoginBox() {
-  const { userAuth, setUserAuth } = useContext(AuthContext);
+  const { authState, authDispatch } = useContext(AuthContext);
 
   const login = (event) => {
     event.preventDefault();
-    setUserAuth(fakeUserData);
+    authDispatch({ type: "login", payload: fakeUserData });
   };
 
   const logout = () => {
-    setUserAuth(null);
+    authDispatch({ type: "logout" });
   };
 
-  if (userAuth) {
+  if (authState) {
     return (
       <>
-        <p>username = {userAuth?.username}</p>
-        <p>fullName = {userAuth?.firstName + " " + userAuth?.lastName}</p>
+        <p>username = {authState.username}</p>
+        <p>fullName = {authState.fullName}</p>
         <p>
           <button onClick={logout}>Log Out</button>
         </p>
