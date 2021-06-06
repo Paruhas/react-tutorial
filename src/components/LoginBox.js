@@ -1,16 +1,32 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../pages/Page003";
 
-function LoginBox() {
-  const user = useContext(AuthContext);
+const fakeUserData = {
+  username: "user1",
+  password: "user1",
+  firstName: "Iam",
+  lastName: "User1",
+};
 
-  if (user) {
+function LoginBox() {
+  const { userAuth, setUserAuth } = useContext(AuthContext);
+
+  const login = (event) => {
+    event.preventDefault();
+    setUserAuth(fakeUserData);
+  };
+
+  const logout = () => {
+    setUserAuth(null);
+  };
+
+  if (userAuth) {
     return (
       <>
-        <p>username = {user.username}</p>
-        <p>fullName = {user.firstName + " " + user.lastName}</p>
+        <p>username = {userAuth?.username}</p>
+        <p>fullName = {userAuth?.firstName + " " + userAuth?.lastName}</p>
         <p>
-          <button>Log Out</button>
+          <button onClick={logout}>Log Out</button>
         </p>
       </>
     );
@@ -25,7 +41,7 @@ function LoginBox() {
         <input type="password" placeholder="password" />
       </p>
       <p>
-        <button>Submit</button>
+        <button onClick={login}>Submit</button>
       </p>
     </form>
   );
