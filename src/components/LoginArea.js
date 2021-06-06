@@ -2,13 +2,11 @@ import React from "react";
 import "./css/LoginArea.css";
 import LoginBox from "./LoginBox";
 
-function LoginArea(props) {
-  const { auth } = props;
-
+function LoginArea() {
   return (
     <div className="login-box">
       <h1>WELCOME</h1>
-      <LoginBox auth={auth} />
+      <LoginBox />
     </div>
   );
 }

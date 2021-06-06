@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../pages/Page003";
 
-function LoginBox(props) {
-  const { auth } = props;
+function LoginBox() {
+  const user = useContext(AuthContext);
 
-  if (auth) {
+  if (user) {
     return (
       <>
-        <p>username = {"username"}</p>
-        <p>fullName = {"firstName + lastName"}</p>
+        <p>username = {user.username}</p>
+        <p>fullName = {user.firstName + " " + user.lastName}</p>
         <p>
           <button>Log Out</button>
         </p>
