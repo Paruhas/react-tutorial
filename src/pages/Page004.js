@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import "./css/Page004.css";
 
 function Page004() {
+  const fileRef = useRef(null);
+
   return (
     <div>
       <Navbar />

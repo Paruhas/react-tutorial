@@ -1,10 +1,30 @@
+.input-box {
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  row-gap: 10px;
 }
 
-.input-container > * {
-  margin: 10px;
+.input-container > form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.input-container > form > p > textarea,
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+.input-container > form > p > button {
+  width: 100%;
+  padding: 10px;
 }
 
 .editInput-form {

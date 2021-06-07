@@ -112,27 +112,33 @@ function Page001() {
       <h1>USE-STATE</h1>
       <section className="app-section">
         <div className="app-container">
-          <div>
+          <div className="input-box">
             <div className="input-container">
               <h3>EXAMPLE TEXT</h3>
               <p>Input1 Text: {input.input1}</p>
               <p>Input2 Text: {input.input2}</p>
+              <form onSubmit={inputSubmit}>
+                <p>
+                  <textarea
+                    rows="5"
+                    name="input1"
+                    value={input.input1}
+                    onChange={onInputChange}
+                  />
+                </p>
+                <p>
+                  <input
+                    type="text"
+                    name="input2"
+                    value={input.input2}
+                    onChange={onInputChange}
+                  />
+                </p>
+                <p>
+                  <button>+ ADD</button>
+                </p>
+              </form>
             </div>
-            <form onSubmit={inputSubmit}>
-              <textarea
-                rows="5"
-                name="input1"
-                value={input.input1}
-                onChange={onInputChange}
-              />
-              <input
-                type="text"
-                name="input2"
-                value={input.input2}
-                onChange={onInputChange}
-              />
-              <button>+ ADD</button>
-            </form>
             <div className="inputArray-container">{inputElement}</div>
           </div>
         </div>
