@@ -4,9 +4,20 @@ import "./css/Page004.css";
 
 function Page004() {
   const fileRef = useRef(null);
+  const textareaRef = useRef(null);
 
-  const submitUploadFile = (event) => {
+  const submitUploadFile = () => {
     console.log(fileRef.current.files[0]);
+  };
+
+  const selectTextareaText = () => {
+    textareaRef.current.focus();
+    textareaRef.current.select();
+  };
+
+  const clearTextareaText = () => {
+    textareaRef.current.value = "";
+    textareaRef.current.focus();
   };
 
   return (
@@ -28,9 +39,10 @@ function Page004() {
           <div className="textarea-box">
             <h3>TEXT AREA</h3>
             <p>
-              <textarea rows="5" />
+              <textarea rows="5" ref={textareaRef} />
             </p>
-            <button>SELECT TEXT</button>
+            <button onClick={selectTextareaText}>SELECT TEXT</button>
+            <button onClick={clearTextareaText}>CLEAR TEXT</button>
           </div>
         </div>
       </section>
