@@ -1,0 +1,33 @@
+.upload-file-box {
+  border: 1px solid black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.upload-file-box > button {
+  padding: 10px;
+  width: 100%;
+}
+
+.textarea-box {
+  border: 1px solid black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.textarea-box > p > textarea {
+  resize: none;
+  overflow: auto;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.textarea-box > button {
+  padding: 10px;
+  width: 100%;
+}

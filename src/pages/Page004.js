@@ -6,11 +6,27 @@ function Page004() {
   return (
     <div>
       <Navbar />
-      <h1>PAGE003</h1>
-      <h1>useContext</h1>
-
+      <h1>PAGE004</h1>
+      <h1>useRef</h1>
       <section className="app-section">
-        <div className="app-container"></div>
+        <div className="app-container">
+          <div className="upload-file-box">
+            <h3>UPLOAD FILE</h3>
+            <p>
+              <input type="file" />
+            </p>
+            <button>UPLOAD</button>
+          </div>
+        </div>
+        <div className="app-container">
+          <div className="textarea-box">
+            <h3>TEXT AREA</h3>
+            <p>
+              <textarea rows="5" />
+            </p>
+            <button>SELECT TEXT</button>
+          </div>
+        </div>
       </section>
     </div>
   );
