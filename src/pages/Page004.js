@@ -5,12 +5,8 @@ import "./css/Page004.css";
 function Page004() {
   const fileRef = useRef(null);
 
-  const uploadFileChange = (event) => {
-    fileRef.current = event.target.files[0];
-  };
-
   const submitUploadFile = (event) => {
-    console.log(fileRef.current);
+    console.log(fileRef.current.files[0]);
   };
 
   return (
@@ -23,7 +19,7 @@ function Page004() {
           <div className="upload-file-box">
             <h3>UPLOAD FILE</h3>
             <p>
-              <input type="file" onChange={uploadFileChange} />
+              <input type="file" ref={fileRef} />
             </p>
             <button onClick={submitUploadFile}>UPLOAD</button>
           </div>
