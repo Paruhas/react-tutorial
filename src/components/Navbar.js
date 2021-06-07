@@ -18,6 +18,9 @@ function Navbar() {
         <li>
           <Link to="/page003">ThirdPage</Link>
         </li>
+        <li>
+          <Link to="/page004">ForthPage</Link>
+        </li>
       </ul>
     </div>
   );
