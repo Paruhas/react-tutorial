@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../components/Navbar";
+import { TextareaSelectClear } from "../components/TextareaSelectClear";
 import "./css/Page004.css";
 
 function Page004() {
@@ -59,16 +60,11 @@ function Page004() {
             <button onClick={submitUploadFile}>UPLOAD</button>
           </div>
         </div>
-        <div className="app-container">
-          <div className="textarea-box">
-            <h3>TEXT AREA</h3>
-            <p>
-              <textarea rows="5" ref={textareaRef} />
-            </p>
-            <button onClick={selectTextareaText}>SELECT TEXT</button>
-            <button onClick={clearTextareaText}>CLEAR TEXT</button>
-          </div>
-        </div>
+        <TextareaSelectClear
+          ref={textareaRef}
+          selectTextareaText={selectTextareaText}
+          clearTextareaText={clearTextareaText}
+        />
       </section>
     </div>
   );
