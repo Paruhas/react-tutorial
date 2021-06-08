@@ -21,6 +21,9 @@ function Navbar() {
         <li>
           <Link to="/page004">ForthPage</Link>
         </li>
+        <li>
+          <Link to="/page005">FifthPage</Link>
+        </li>
       </ul>
     </div>
   );
